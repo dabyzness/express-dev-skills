@@ -1,13 +1,13 @@
 const skills = [
-  { skillName: "JavaScript", learned: "", projectsCompleted: [] },
-  { skillName: "CSS", learned: "", projectsCompleted: [] },
-  { skillName: "HTML5", learned: "", projectsCompleted: [] },
-  { skillName: "MongoDB", learned: "", projectsCompleted: [] },
-  { skillName: "EJS", learned: "", projectsCompleted: [] },
-  { skillName: "React", learned: "", projectsCompleted: [] },
-  { skillName: "Python", learned: "", projectsCompleted: [] },
-  { skillName: "Flask", learned: "", projectsCompleted: [] },
-  { skillName: "PostgreSQL", learned: "", projectsCompleted: [] },
+  { skillName: "JavaScript", learned: true, projectsCompleted: [] },
+  { skillName: "CSS", learned: true, projectsCompleted: [] },
+  { skillName: "HTML5", learned: true, projectsCompleted: [] },
+  { skillName: "MongoDB", learned: true, projectsCompleted: [] },
+  { skillName: "EJS", learned: true, projectsCompleted: [] },
+  { skillName: "React", learned: false, projectsCompleted: [] },
+  { skillName: "Python", learned: false, projectsCompleted: [] },
+  { skillName: "Flask", learned: false, projectsCompleted: [] },
+  { skillName: "PostgreSQL", learned: false, projectsCompleted: [] },
 ];
 
 export { skills };
