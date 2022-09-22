@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task</title>
+  </head>
+  <body>
+    <h1>Todo</h1>
+    <h2>Todo #<%= skill._id %></h2>
+    <h3><%= skill.skillName %></h3>
+    <p>Do you know this?: <%= skill.learned ? "Yes" : "No, I'm a spud" %></p>
+    <h3>List of Projects</h3>
+    <ul>
+      <% skill.projects.forEach(project => { %>
+      <li><%= project %></li>
+      <% }) %>
+    </ul>
+
+    <a href="/skills">Go back</a>
+  </body>
+</html>

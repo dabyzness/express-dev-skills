@@ -5,4 +5,10 @@ const router = Router();
 
 router.get("/", SkillsCtrl.index);
 
+router.get("/new", SkillsCtrl.new);
+
+router.get("/:id", SkillsCtrl.show);
+
+router.post("/", SkillsCtrl.create);
+
 export { router };
