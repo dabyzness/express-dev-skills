@@ -3,7 +3,7 @@ import { DevSkill } from "../models/skill.js";
 function index(req, res) {
   DevSkill.find({})
     .then((skills) => {
-      res.render("skills/index", { skills });
+      res.render("skills/index", { skills, time: req.time });
       console.log(skills);
     })
     .catch((error) => {
@@ -44,4 +44,15 @@ function show(req, res) {
     });
 }
 
-export { index, newSkill as new, create, show };
+function deleteSkill(req, res) {
+  DevSkill.findByIdAndDelete(req.params.id)
+    .then((skill) => {
+      res.redirect("/skills");
+    })
+    .catch((error) => {
+      console.log(error);
+      res.redirect("/skills");
+    });
+}
+
+export { index, newSkill as new, create, show, deleteSkill as delete };

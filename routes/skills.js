@@ -1,14 +1,16 @@
 import { Router } from "express";
-import * as SkillsCtrl from "../controllers/skills.js";
+import * as skillsCtrl from "../controllers/skills.js";
 
 const router = Router();
 
-router.get("/", SkillsCtrl.index);
+router.get("/", skillsCtrl.index);
 
-router.get("/new", SkillsCtrl.new);
+router.get("/new", skillsCtrl.new);
 
-router.get("/:id", SkillsCtrl.show);
+router.get("/:id", skillsCtrl.show);
 
-router.post("/", SkillsCtrl.create);
+router.post("/", skillsCtrl.create);
+
+router.delete("/:id", skillsCtrl.delete);
 
 export { router };
